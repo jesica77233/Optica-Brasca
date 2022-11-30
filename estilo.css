@@ -1,0 +1,134 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+   background-image: url(./img/Chicos\ con\ lentes\ de\ sol.webp);
+   background-repeat: no-repeat;
+} 
+
+.header{
+    background-color: rgb(155, 155, 155);
+    padding: 2px;
+    display:flex;
+    grid-area: header;
+    justify-content: space-around;
+    align-items: center;
+}
+.img{
+    width: 50px;
+}
+.header img {
+    width: 60px;
+    border-radius: 20%;
+}
+.header nav ul{
+    list-style: none;
+    background-color: gray;
+    display: flex;
+    justify-content: flex-end;
+}
+.header nav ul a{
+    color: white;
+    text-decoration: none;
+    padding: 0.7rem;
+    display: block;
+}
+.header nav li a:hover{
+    background-color: rgb(180, 180, 180);
+    color:black;
+    font-weight: bold;
+}
+.m.h2{
+    background-color: white;
+    padding:1.2rem;
+    grid-area: main;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+h2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+div{
+    margin: 10px;
+}
+.main h1{
+    font-family: 'Bowlby One SC', cursive;
+    font-size: 55px;
+    color:black;
+    text-align: center;
+}
+.main p{
+    margin: 1rem;
+     padding: 20px;
+     font-family: 'Bad Script', cursive;
+     font-size: 20px;
+     color: rgb(54, 54, 54);
+ }
+.main .img{
+   text-align: center;
+   padding: 1rem;
+}
+.aside{
+    background-color: #e5e6e6;
+    padding:1.2rem;
+    display: flex;
+    flex-direction: column;
+    grid-area: aside;
+    justify-content: space-between;
+}
+.aside h2{
+    align-self: center;
+    margin:1rem;
+}
+.aside .img{
+    align-self: center;
+    margin: 1rem;
+}
+.footer{
+    background-color: #7b7b7b;
+    padding:1.2rem;
+    display: flex;
+    justify-content: space-between;
+    grid-area: footer;
+    text-align: center;
+}
+.footer p{
+    color: white;
+}
+contenedor{
+    width: 90%;
+	margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(3, auto);
+    grid-template-areas: 
+    "logo nav nav nav"
+        "Optica Brasca Optica Brasca"
+         "footer footer"
+        "aside aside";
+    gap: 10px;
+}
+
+@media screen and (max-width:780px) {
+    .contenedor{
+       background-color: grey;
+    } 
+}
+    @media screen and (max-width: 480px){
+        .contenedor{
+            background-color: rgb(22, 22, 17);            
+            grid-template-rows: 1fr 1fr;
+            grid-template-rows: repeat(4, auto);
+            grid-template-areas: 
+            "logo nav "
+            "footer aside "
+
+        }
+    
+    
+}
